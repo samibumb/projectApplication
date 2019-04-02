@@ -6,39 +6,32 @@ import java.util.List;
 public class AppMain {
     public static void main(String[] args){
 
-       Cars car = new Cars();
-       car.setNameOfCar("Audi");
-       car.setCarModel("A6");
-       car.setPriceInEuro("30000€");
-       car.setYearOfManufacture(2017);
-       car.setFuel("Diesel");
-       car.setKilometers(150);
-
-        Cars car2 = new Cars();
-        car2.setNameOfCar("Audi");
-        car2.setCarModel("A7");
-        car2.setPriceInEuro("25000€");
-        car2.setYearOfManufacture(2015);
-        car2.setFuel("Diesel");
-        car2.setKilometers(30000);
-
-        Cars car3 = new Cars();
-        car3.setNameOfCar("Audi");
-        car3.setCarModel("A5");
-        car3.setYearOfManufacture(2014);
-        car3.setPriceInEuro("15000€");
-        car3.setFuel("Diesel");
-        car3.setKilometers(150000);
-
         List<Cars> list = new ArrayList<>();
 
-        list.add(car);
+        Cars car1=new Cars(1,"Audi","A6"
+                ,"25000€",2016,"Diesel",30000);
+
+        Cars car2=new Cars(2,"Audi","A7"
+                ,"32250€",2015,"Diesel",30000);
+
+        Cars car3=new Cars(3,"Audi","Q8"
+                ,"60000€",2018,"Petrol",1000);
+
+        Cars car4=new Cars(4,"Audi","A5"
+                ,"54000€",2019,"Petrol",30000);
+
+
+        CarDealership dealer = new CarDealership();
+        dealer.addRow();
+        list.add(car1);
         list.add(car2);
         list.add(car3);
-
+        list.add(car4);
+        System.out.println("List of cars :");
         for (Cars carList : list){
             System.out.println(carList);
         }
+
 
     }
 

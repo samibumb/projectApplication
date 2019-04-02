@@ -1,6 +1,6 @@
 package src.projectApp;
 
-public abstract class CarDealership {
+public  class CarDealership implements Methods{
 
     private String name;
 
@@ -11,6 +11,10 @@ public abstract class CarDealership {
     private String address;
 
     private String timetable;
+
+    public void addRow(){
+        System.out.println("Adding rows");
+    }
 
 
 
