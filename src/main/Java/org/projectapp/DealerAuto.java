@@ -7,8 +7,12 @@ public class DealerAuto {
 
     List<Vehicle> vehicleList = new ArrayList<>();
     private String name;
+
     private String address;
+
     private String phoneNumber;
+
+    private String eMail;
 
     public void addVehicleToDealerShip(Vehicle vehicle){
         vehicleList.add(vehicle);
@@ -28,11 +32,12 @@ public class DealerAuto {
     }
 
 
-    public DealerAuto(String companyName , String address , String phoneNumber){
+    public DealerAuto(String companyName , String address , String phoneNumber , String companyEMail){
 
         this.name = companyName;
         this.address = address;
         this.phoneNumber = phoneNumber;
+        this.eMail = companyEMail;
     }
 
     public String getName() {
@@ -43,5 +48,11 @@ public class DealerAuto {
         return address;
     }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
+    public String geteMail(){
+        return eMail;
+    }
 }

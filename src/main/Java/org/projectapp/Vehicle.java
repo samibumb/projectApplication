@@ -20,8 +20,12 @@ public class Vehicle implements Features {
 
     private String price;
 
+    private VehicleComposition composition;
+
+
     public Vehicle(int id, String brand, String model, String country, int year,
-                   String fuel_Type, double engine_Size, int horsepower, String price) {
+                   String fuel_Type, double engine_Size, int horsepower, String price , VehicleComposition vehicleComposition) {
+
         this.id = id;
         Brand = brand;
         Model = model;
@@ -31,6 +35,7 @@ public class Vehicle implements Features {
         Engine_Size = engine_Size;
         Horsepower = horsepower;
         this.price = price;
+        this.composition = vehicleComposition;
     }
 
     @Override
@@ -44,7 +49,7 @@ public class Vehicle implements Features {
                     "viteza maxima legala de 100km/h.");
             throw new Exception("Driver license SUSPENDED");
         }else{
-            System.out.println("Have a nice trip!");
+            System.out.println("\n Have a nice trip!");
         }
     }
 
@@ -54,9 +59,10 @@ public class Vehicle implements Features {
     }
 
     public String toString() {
-        return Brand+" "+Model+" "+ Country+" "+year+" "+
-                " "+Fuel_Type+" "+Engine_Size+" "+Horsepower+" "+price;
+        return "\n"+Brand+" "+Model+" "+ Country+" "+year+" "+
+                " "+Fuel_Type+" "+Engine_Size+" "+Horsepower+" "+price+".\nCar contains :"+composition;
     }
+
 
 
 }
