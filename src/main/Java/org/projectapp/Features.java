@@ -1,4 +1,4 @@
-package src.projectApp;
+package main.Java.org.projectapp;
 
 public interface Features {
 
