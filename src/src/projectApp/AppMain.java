@@ -1,37 +1,42 @@
 package src.projectApp;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.Iterator;
 
 public class AppMain {
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
 
-        List<Cars> list = new ArrayList<>();
+        DealerAuto dealerAuto = new DealerAuto("AutoWorld" ,
+                "Cluj-Napoca/Romania" , "0264-436-905");
 
-        Cars car1=new Cars(1,"Audi","A6"
-                ,"25000€",2016,"Diesel",30000);
+        System.out.println(dealerAuto.getName()+" Dealer from "+dealerAuto.getAddress()+" has the following cars:\n");
 
-        Cars car2=new Cars(2,"Audi","A7"
-                ,"32250€",2015,"Diesel",30000);
+        Vehicle vehicle1 = new Vehicle(1 , "Audi" , "Q8" , "Germany" ,
+                2018 , "Diesel" , 3.000 , 286 , "90.000€");
 
-        Cars car3=new Cars(3,"Audi","Q8"
-                ,"60000€",2018,"Petrol",1000);
+        Vehicle vehicle2 = new Vehicle(2 , "Audi" , "A7" , "Romania" ,
+                2018 , "Petrol" , 3.000 , 245 , "65.000€");
 
-        Cars car4=new Cars(4,"Audi","A5"
-                ,"54000€",2019,"Petrol",30000);
+        Vehicle vehicle3 = new Vehicle(3 , "Audi" , "Q5" , " France" ,
+                2017 , "Diesel" , 2.000 , 190 , "50.000€\n");
 
+        dealerAuto.addVehicleToDealerShip(vehicle1);
+        dealerAuto.addVehicleToDealerShip(vehicle2);
+        dealerAuto.addVehicleToDealerShip(vehicle3);
 
-        CarDealership dealer = new CarDealership();
-        dealer.addRow();
-        list.add(car1);
-        list.add(car2);
-        list.add(car3);
-        list.add(car4);
-        System.out.println("List of cars :");
-        for (Cars carList : list){
-            System.out.println(carList);
+        Iterator iterator=dealerAuto.vehicleList.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
         }
 
+        dealerAuto.sell(vehicle1);
+        dealerAuto.getStock();
+
+        try {
+           vehicle1.drive(55);
+       }catch (Exception e){
+           System.out.println("This happens when you violate the law "+e);
+       }
 
     }
 
