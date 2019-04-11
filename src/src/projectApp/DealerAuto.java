@@ -16,7 +16,7 @@ public class DealerAuto {
 
     public void sell(Vehicle vehicle){
         if (vehicleList.remove(vehicle)) {
-            System.out.println("Vehicle sold  \n");
+            System.out.println("Vehicle sold \n");
         }
     }
 
