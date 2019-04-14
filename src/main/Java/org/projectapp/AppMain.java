@@ -13,10 +13,13 @@ public class AppMain {
         int nrOfAttemps = 0, nrMaxAttemps = 3;
         boolean guess = false;
 
-        while (guess != true && nrOfAttemps < nrMaxAttemps) {
+        System.out.println("---LOGIN---");
 
-            System.out.println("Username and password :");
+        while (guess != true && nrOfAttemps < nrMaxAttemps) {
+            System.out.print("Username :");
             String userName = scanner.nextLine();
+
+            System.out.print("Password :");
             String password = scanner.nextLine();
 
             if (userName.equals("samibumb") && password.equals("samieboss")) {
