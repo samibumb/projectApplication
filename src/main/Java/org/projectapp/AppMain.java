@@ -7,15 +7,16 @@ import java.util.Scanner;
 
 public class AppMain {
     public static void main(String[] args) {
+
         Date date = new Date();
 
         Scanner scanner = new Scanner(System.in);
-        int nrOfAttemps = 0, nrMaxAttemps = 3;
+        int nrOfAttempts = 0, nrMaxAttempts = 3;
         boolean guess = false;
 
         System.out.println("---LOGIN---");
 
-        while (guess != true && nrOfAttemps < nrMaxAttemps) {
+        while (guess != true && nrOfAttempts < nrMaxAttempts) {
             System.out.print("Username :");
             String userName = scanner.nextLine();
 
@@ -23,7 +24,13 @@ public class AppMain {
             String password = scanner.nextLine();
 
             if (userName.equals("samibumb") && password.equals("samieboss")) {
-                System.out.println(date);
+               try {
+                   Thread.sleep(1000);
+                   System.out.println(date);
+                   Thread.sleep(1000);
+               }catch (InterruptedException e){
+                   System.out.println("");
+               }
 
                 guess = true;
 
@@ -32,8 +39,12 @@ public class AppMain {
                         "Cluj-Napoca/Romania", "0264-436-905", "autoworld@audi.com");
 
                 //Display informations about dealerAuto object
-                System.out.println("\nDealer " + dealerAuto.getName() + "\n" + "Address :" + dealerAuto.getAddress() + "\n"
-                        + "Phone number :" + dealerAuto.getPhoneNumber() + "\n" + "Email :" + dealerAuto.geteMail() + "\n");
+                try{ System.out.println("\nDealer " + dealerAuto.getName() + "\n" + "Address :" + dealerAuto.getAddress() + "\n"
+                            + "Phone number :" + dealerAuto.getPhoneNumber() + "\n" + "Email :" + dealerAuto.geteMail() + "\n");
+                    Thread.sleep(1000);
+                }catch (InterruptedException e){
+                    System.out.println(e);
+                }
 
                 System.out.println(dealerAuto.getName() + " Dealer from " + dealerAuto.getAddress() + " has the following cars:");
 
@@ -69,6 +80,8 @@ public class AppMain {
                 //how much cars remained & cars
                 dealerAuto.getStock();
 
+                CEO ceo =new CEO("Bumb Samuel","0746564743.");
+
 
 
                 try {
@@ -80,16 +93,14 @@ public class AppMain {
             } else {
                 System.out.println("Invalid username or password.Please try again!");
             }
-            nrOfAttemps++;
-
-
+            nrOfAttempts++;
         }
-        if (nrOfAttemps>nrMaxAttemps){
-            throw new Error("Try again later");
-        }
-
+       try {
+           if (nrOfAttempts==nrMaxAttempts){
+               throw new Error("You have exceeded the number of attempts! ");
+           }
+       }catch (Error logging){
+           System.out.println(logging+"Please , try again later!");
+       }
     }
-
-
-
 }
