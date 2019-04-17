@@ -5,7 +5,7 @@ import java.util.List;
 
 public class DealerAuto {
 
-    List<Vehicle> vehicleList = new ArrayList<>();
+    public List<Vehicle> vehicleList = new ArrayList<>();
     private String name;
 
     private String address;

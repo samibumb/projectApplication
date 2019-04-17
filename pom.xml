@@ -8,9 +8,9 @@
 
     <groupId>org.ftit</groupId>
     <artifactId>dealer-ship</artifactId>
-    <version>1.0</version> <!-- Not relevant actually, version numbers overidden in CD pipeline jobs -->
+    <version>1.0.1</version> <!-- Not relevant actually, version numbers overidden in CD pipeline jobs -->
     <packaging>jar</packaging>
-    <name>Dealer Auto</name>
+    <name>AutoWorld</name>
 
     <properties>
         <java.version>1.8</java.version>

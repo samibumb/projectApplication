@@ -1,6 +1,5 @@
 package main.Java.org.projectapp;
 
-
 import java.util.Date;
 import java.util.Iterator;
 import java.util.Scanner;

@@ -24,7 +24,7 @@ public class Vehicle implements Features {
 
 
     public Vehicle(int id, String brand, String model, String country, int year,
-                   String fuel_Type, double engine_Size, int horsepower, String price , VehicleComposition vehicleComposition) {
+                   String fuel_Type, double engine_Size, int horsepower, String price , main.Java.org.projectapp.VehicleComposition vehicleComposition) {
 
         this.id = id;
         Brand = brand;

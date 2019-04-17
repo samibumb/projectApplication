@@ -16,8 +16,8 @@ public class VehicleComposition {
     private String gearBox;
 
 
-    public VehicleComposition(String wheels , String chassis , int nrOfDoors , String Engine , String distributionSystem
-                                ,String gearBox){
+    public VehicleComposition(String wheels , String chassis , int nrOfDoors , String Engine ,
+                              String distributionSystem,String gearBox){
         this.wheels=wheels;
         this.chassis=chassis;
         this.nrOfDoors=nrOfDoors;
@@ -27,7 +27,8 @@ public class VehicleComposition {
     }
 
     public String toString(){
-        return "\n-a number of "+ wheels+"\n-an "+chassis+"\n-a number of "+nrOfDoors+" doors."+"\n-the engine is from "+
-                engine+" company\n-distribution system from "+distributionSystem+"\n-it has a "+gearBox;
+        return "\n-a number of "+ wheels+"\n-an "+chassis+"\n-a number of "+nrOfDoors+" doors."+
+                "\n-the engine is from "+engine+" company\n-distribution system from "+distributionSystem+
+                "\n-it has a "+gearBox;
     }
 }
