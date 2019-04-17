@@ -41,12 +41,12 @@ public class Vehicle implements Features {
     @Override
     public void drive(int speedInCity) throws Exception{
         if (speedInCity>60 && speedInCity<100){
-            System.out.println("Soferul masinii "+Brand+" "+Model+" va avea primi amenda pentru ca a depasit" +
-                    "viteza legala de 60km/h.");
+            System.out.println("\nSoferul masinii "+Brand+" "+Model+" va avea primi amenda pentru ca a depasit" +
+                    " viteza legala de 60km/h.");
             throw new Exception("Amend");
         }else if (speedInCity>100){
-            System.out.println("Soferul masinii "+Brand+" "+Model+" va avea permisul suspendat pentru ca a depasit" +
-                    "viteza maxima legala de 100km/h.");
+            System.out.println("\nSoferul masinii "+Brand+" "+Model+" va avea permisul suspendat pentru ca a depasit" +
+                    " viteza maxima legala de 100km/h.");
             throw new Exception("Driver license SUSPENDED");
         }else{
             System.out.println("\n Have a nice trip!");

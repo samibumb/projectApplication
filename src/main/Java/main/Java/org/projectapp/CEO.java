@@ -10,7 +10,7 @@ public class CEO {
         this.name=ceoName;
         this.tel=nrTel;
 
-        System.out.println("\n"+ceoName+" is the CEO of the company.\nThe CEO's phone number :"+nrTel);
+        System.out.println("\nCEO informations :\n-name :"+ceoName+"\n-phone number :"+nrTel);
 
     }
 }
