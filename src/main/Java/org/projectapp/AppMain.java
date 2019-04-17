@@ -74,6 +74,10 @@ public class AppMain {
                     System.out.println(iterator.next());
                 }
 
+                for (Vehicle vehicle : dealerAuto.vehicleList){
+                    System.out.println(vehicle);
+                }
+
                 //selling the mentioned car to a random client
                 dealerAuto.sell(vehicle1);
 
