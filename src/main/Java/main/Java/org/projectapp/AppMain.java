@@ -61,18 +61,33 @@ public class AppMain {
                 Vehicle vehicle1 = new Vehicle(1, "Audi", "Q8", "Germany",
                         2018, "Diesel", 3.000, 286, "90.000€", carElements);
 
-                Vehicle vehicle2 = new Vehicle(2, "Audi", "A7", "Romania",
-                        2018, "Petrol", 3.000, 245, "65.000€", carElements1);
+                Vehicle vehicle2 = new Vehicle(2, "BMW", "320d", "Romania",
+                        2019, "Diesel", 2.000, 184, "25.000€", carElements1);
 
-                Vehicle vehicle3 = new Vehicle(3, "Audi", "Q5", " France",
+                Vehicle vehicle3 = new Vehicle(3, "Mercedes-Benz", "C63S", "",
                         2017, "Diesel", 2.000, 190, "50.000€", carElements);
+
+                Vehicle vehicle4 = new Vehicle(4, "Volkswagen", "Q5", " France",
+                        2017, "Diesel", 2.000, 190, "50.000€", carElements);
+
+                Vehicle vehicle5 = new Vehicle(5, "Audi", "Q5", " France",
+                        2017, "Diesel", 2.000, 190, "50.000€", carElements);
+
+                Vehicle vehicle6 = new Vehicle(6, "Audi", "Q5", " France",
+                        2017, "Diesel", 2.000, 190, "50.000€", carElements);
+
+                Vehicle vehicle7 = new Vehicle(7, "Mercedes", "G350", " Germany",
+                        2017, "Diesel", 2.000, 333, "120.000€", carElements);
 
 
                 /**adding the vehicles to dealerAuto list*/
                 dealerAuto.addVehicleToDealerShip(vehicle1);
                 dealerAuto.addVehicleToDealerShip(vehicle2);
                 dealerAuto.addVehicleToDealerShip(vehicle3);
-
+                dealerAuto.addVehicleToDealerShip(vehicle4);
+                dealerAuto.addVehicleToDealerShip(vehicle5);
+                dealerAuto.addVehicleToDealerShip(vehicle6);
+                dealerAuto.addVehicleToDealerShip(vehicle7);
 
                 /**the cars in showroom with all specifications*/
                 Iterator iterator = dealerAuto.vehicleList.iterator();

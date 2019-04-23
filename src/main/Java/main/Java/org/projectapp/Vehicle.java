@@ -24,7 +24,7 @@ public class Vehicle implements Features {
 
 
     public Vehicle(int id, String brand, String model, String country, int year,
-                   String fuel_Type, double engine_Size, int horsepower, String price , main.Java.org.projectapp.VehicleComposition vehicleComposition) {
+                   String fuel_Type, double engine_Size, int horsepower, String price) {
 
         this.id = id;
         Brand = brand;
@@ -35,7 +35,22 @@ public class Vehicle implements Features {
         Engine_Size = engine_Size;
         Horsepower = horsepower;
         this.price = price;
-        this.composition = vehicleComposition;
+    }
+
+    public Vehicle(){}
+
+    public Vehicle(int id, String brand, String model, String country, int year,
+                   String fuel_Type, double engine_Size, int horsepower, String price, VehicleComposition composition) {
+        this.id = id;
+        Brand = brand;
+        Model = model;
+        Country = country;
+        this.year = year;
+        Fuel_Type = fuel_Type;
+        Engine_Size = engine_Size;
+        Horsepower = horsepower;
+        this.price = price;
+        this.composition = composition;
     }
 
     @Override
@@ -61,6 +76,42 @@ public class Vehicle implements Features {
     public String toString() {
         return "\n"+Brand+" "+Model+" "+ Country+" "+year+" "+
                 " "+Fuel_Type+" "+Engine_Size+" "+Horsepower+" "+price+".\nCar contains :"+composition;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getBrand() {
+        return Brand;
+    }
+
+    public String getModel() {
+        return Model;
+    }
+
+    public String getCountry() {
+        return Country;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getFuel_Type() {
+        return Fuel_Type;
+    }
+
+    public double getEngine_Size() {
+        return Engine_Size;
+    }
+
+    public int getHorsepower() {
+        return Horsepower;
+    }
+
+    public String getPrice() {
+        return price;
     }
 
 
